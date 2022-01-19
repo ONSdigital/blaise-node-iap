@@ -1,0 +1,43 @@
+{
+  "name": "blaise-iap-node-provider",
+  "jest": {
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ]
+  },
+  "version": "1.0.0",
+  "module": "lib/esm/blaise-iap-node-provider.js",
+  "main": "lib/cjs/blaise-iap-node-provider.js",
+  "types": "lib/esm/blaise-iap-node-provider.d.ts",
+  "license": "MIT",
+  "scripts": {
+    "build": "yarn build:esm && yarn build:cjs",
+    "build:esm": "tsc",
+    "build:cjs": "tsc --module commonjs --outDir lib/cjs",
+    "test": "jest --coverage --watchAll=false"
+  },
+  "dependencies": {
+    "@babel/preset-env": "^7.14.7",
+    "@types/jsonwebtoken": "^8.5.5",
+    "axios": "^0.21.1",
+    "google-auth-library": "^7.9.1",
+    "jsonwebtoken": "^8.5.1",
+    "path-parse": "^1.0.7",
+    "typescript": "~4.2.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.1",
+    "@babel/preset-typescript": "^7.12.1",
+    "@types/jest": "26.0.22",
+    "axios-mock-adapter": "^1.20.0",
+    "babel-jest": "^27.0.6",
+    "eslint": "^7.29.0",
+    "jest": "^27.0.6",
+    "ts-jest": "^27.0.3",
+    "yarn": "^1.22.10"
+  },
+  "files": [
+    "/lib",
+    "/mocks"
+  ]
+}
